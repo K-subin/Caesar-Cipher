@@ -29,15 +29,15 @@ def removeNonLetters(message):
 def percentEnglishWords(message):
     message = message.lower()
     message = removeNonLetters(message)
-    posiible_words = message.split()
+    possible_words = message.split()
 
-    if posiible_words == []:
+    if possible_words == []:
         return 0.0
     count_words = 0
-    for word in posiible_words:
+    for word in possible_words:
         if word in EnglishWordS:
             count_words += 1
-    return float(count_words)/len(posiible_words)
+    return float(count_words)/len(possible_words)
 
 #----- 영어인지 판정하기
 def isEnglish(message, wordPercentage = 20, letterPercentage = 80):
